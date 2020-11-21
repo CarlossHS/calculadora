@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #262626;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #037e8c;
+  border-spacing: 3px;
+}
+
+.calculator td {
+  background-color: #03a6a6;
+  text-align: center;
+  height: 100px;
+  font-size: 24px;
+  transition: 0.2s;
+}
+
+.calculator td:not(.disabled) {
+  cursor: pointer;
+}
+
+.calculator td:not(.disabled):hover {
+  filter: brightness(90%);
+}
+
+.calculator td:not(.disabled):active {
+  filter: brightness(80%);
+}
+
+.calculator td.disabled {
+  background-color: transparent;
+}
+
+.calculator button,
+.calculator form {
+  background-color: #f26444;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  outline: 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.calculator button:active {
+  filter: brightness(90%);
+}
+
+.calculator input {
+  display: none;
+}
+
+.calculator .result {
+  font-size: 36px;
+  overflow-x: scroll;
+  width: 400px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #03a6a6;
+}
+
+/* Result page */
+.all-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.all-results div {
+  background-color: #333333;
+  padding: 10px;
+  width: 70%;
+  display: flex;
+}
+
+.all-results div:first-child {
+  background: #03a6a6;
+  height: 100px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-results * + * {
+  margin-top: 20px;
+}
+
+.all-results .return-button {
+  background: #03a6a6;
+  padding: 18px;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  filter: brightness(90%);
+  transition: 0.2s;
+}
+
+.all-results .return-button:hover {
+  filter: brightness(85%);
+}
+
+.all-results .return-button:active {
+  filter: brightness(80%);
+}
